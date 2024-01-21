@@ -11,7 +11,7 @@ def dfs(v,graph,visited):
 
 
 def mainPoint (list, graphSet):
-    if list.count(False) >=2:
+    if list.count(False) >=3:
         max=0
         for i in range(1,len(graphSet)):
             if len(graphSet[i])>max:
@@ -20,7 +20,7 @@ def mainPoint (list, graphSet):
         return find_point
     else:
         find_point=list[1:].index(False)
-        return find_point
+        return find_point+1
 
 
 def find_doubleLoop (graphSet,visited):
